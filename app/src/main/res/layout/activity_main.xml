@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Enter value to convert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnMileToKm"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mile to Km"
+        android:onClick="convert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditText"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnKmToMile"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Km to Mile"
+        android:onClick="convert"
+        app:layout_constraintStart_toEndOf="@+id/btnMileToKm"
+        app:layout_constraintTop_toTopOf="@+id/btnMileToKm"/>
+
+    <Button
+        android:id="@+id/btnPoundToKg"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pound to Kg"
+        android:onClick="convert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMileToKm"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnKgToPound"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kg to Pound"
+        android:onClick="convert"
+        app:layout_constraintStart_toEndOf="@+id/btnPoundToKg"
+        app:layout_constraintTop_toTopOf="@+id/btnPoundToKg"/>
+
+    <Button
+        android:id="@+id/btnInchToCm"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inch to Cm"
+        android:onClick="convert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPoundToKg"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnCmToInch"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cm to Inch"
+        android:onClick="convert"
+        app:layout_constraintStart_toEndOf="@+id/btnInchToCm"
+        app:layout_constraintTop_toTopOf="@+id/btnInchToCm"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInchToCm"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
